@@ -1,0 +1,510 @@
+/* ! Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    margin: 0;
+    color: #f7f7f7;
+    background-color: rgb(22, 22, 22);
+    font-family: "Nunito", sans-serif;
+    scrollbar-color: rgb(60, 161, 255) rgb(22, 22, 22);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    max-width: 1440px;
+    height: 100px;
+    display: flex;
+    margin: auto;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    letter-spacing: 3px;
+}
+
+nav a:active {
+    color: rgb(60, 161, 255);
+}
+
+nav>a {
+    margin-left: 1.5em;
+}
+
+.menu-item {
+    display: inline-block;
+    text-decoration: none;
+    color: #f7f7f7;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    color: rgb(60, 161, 255);
+}
+
+span {
+    margin: auto auto auto 1.5em;
+}
+
+svg {
+    width: 64px;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu-links {
+    margin: auto 1.5em auto auto;
+    padding: 0;
+    text-align: right;
+}
+
+.menu-padding {
+    padding-right: 1em;
+}
+
+.st0 {
+    display: none;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 30;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 30;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: none;
+    stroke: #f7f7f7;
+    stroke-width: 60;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    transition-duration: .25s;
+}
+
+.st3 {
+    fill: #f7f7f7;
+}
+
+svg {
+    transition-duration: .2s;
+}
+
+svg:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform .2s ease;
+}
+
+svg:hover .st2 {
+    stroke: rgb(60, 161, 255);
+    transition-duration: .2s;
+}
+
+.menu-item:hover {
+    color: rgb(60, 161, 255);
+    transition-duration: .2s;
+}
+
+#monogram {
+    display: flex;
+}
+
+main {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    width: 100%;
+}
+
+/*! Index */
+#cta-btn {
+    background-color: rgb(60, 161, 255);
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+    padding: 1em 2em;
+    border-style: none;
+    border-radius: 30px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+#cta-btn:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition-duration: .25s;
+}
+
+#cta-btn:active {
+    scale: 1;
+    transition-duration: .25s;
+}
+
+/* ! Work */
+img {
+    max-width: 100%;
+}
+
+.gallery {
+    padding: 1.5em;
+}
+
+.gallery video {
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.gallery a {
+    color: #f7f7f7;
+}
+
+.gallery a:first-child {
+    margin-top: 0;
+}
+
+.gallery a:last-child {
+    margin-bottom: 0;
+}
+
+.gallery p {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.gallery h3 {
+    margin-top: 0;
+}
+
+.card {
+    background-color: rgb(30, 30, 30);
+    margin: 1em 0;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card a:active {
+    color: rgb(60, 161, 255);
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-title {
+    color: #3ca1ff;
+    transform-origin: left center;
+    transition-duration: .2s;
+}
+
+.card-title:hover,
+.card-title:active {
+    text-decoration: underline;
+    color: rgba(60, 161, 255, .6);
+    transition-duration: .2s;
+    scale: 1.1;
+}
+
+/* ! About */
+.about-main {
+    margin: 2em;
+}
+
+.about-ctn {
+    max-width: 650px;
+    margin: 0 2em;
+}
+
+.about {
+    font-size: 1.3em;
+    display: flex;
+    justify-self: center;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ! Contact Page */
+.heading {
+    font-size: 2rem;
+    color: #f7f7f7;
+    max-width: 600px;
+    margin: 2rem auto;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    line-height: 1.3;
+    position: relative;
+    margin: 0;
+}
+
+#typed-content,
+#cursor {
+    font-size: 2rem;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+#cursor {
+    animation: blink-caret 1s step-start infinite;
+    user-select: none;
+    color: rgb(60, 161, 255);
+}
+
+@keyframes blink-caret {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 1em auto;
+    background-color: rgb(30, 30, 30);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+    animation: hoverLanding 0.9s ease-out forwards;
+    transform-origin: center center;
+}
+
+.form-ctn {
+    margin: 0 1em;
+}
+
+form,
+#contact-btn {
+    font-size: 18px;
+}
+
+form,
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+textarea {
+    background-color: #f7f7f7;
+    border-style: none;
+    color: rgb(22, 22, 22);
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    border-radius: 3px;
+    padding: .5em;
+}
+
+form input,
+textarea {
+    outline-color: #3ca1ff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.input,
+#contact-btn {
+    margin-top: 1em;
+}
+
+#contact-btn {
+    align-self: flex-start;
+    text-align: left;
+    padding: .5em 1em;
+    border-radius: 3px;
+    border-style: none;
+    color: #f7f7f7;
+    background-color: rgb(60, 161, 255);
+    transition-duration: .3s;
+}
+
+#contact-btn:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition-duration: .3s;
+}
+
+.thanks {
+    max-width: 1000px;
+    padding: 1em;
+}
+
+@keyframes hoverLanding {
+    0% {
+        transform: translateY(40px) scale(1.15);
+        opacity: 0;
+        filter: blur(2px);
+        box-shadow: -12px 12px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    60% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+        filter: blur(0.5px);
+        box-shadow: -10px 10px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        filter: blur(0);
+        box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* ! Hero Section */
+.hero {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2em;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-bg-animation {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    object-fit: cover;
+    opacity: .1;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    text-shadow: -10px 10px 15px rgba(0, 0, 0, .5);
+}
+
+/* ! Scroll Scaling */
+.card {
+    transform: scale(0.8);
+    opacity: 0.7;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.in-view {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card:active {
+    background-color: rgb(40, 40, 40);
+    transition: background-color 0.2s ease;
+}
+
+.card-title span {
+    margin: 0;
+}
+
+.external-link-icon {
+    font-size: 0.9em;
+    margin-left: 0.3em;
+    opacity: 0.6;
+}
+
+.card a:hover .external-link-icon {
+    opacity: 1;
+}
+
+/* ! Hero Changes */
+.hero-ctn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#cta {
+    text-decoration: none;
+    background-color: #3ca1ff;
+    color: #f7f7f7;
+    padding: .5em 1em;
+    flex-grow: 0;
+    border-radius: 10px;
+    transform-origin: left center;
+    transition-duration: .2s;
+}
+
+#cta:hover {
+    transition-duration: .2s;
+    scale: 1.1;
+    background-color: rgba(60, 161, 255, .8);
+}
+
+#hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    opacity: .1;
+    animation: fadeIn 2s ease-in-out forwards;
+    filter: drop-shadow(0px -6px 6px #3ca1ff);
+}
+
+/* !Mobile Media Query */
+@media screen and (max-width: 650px) {
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="assets/og-img.png">
+    <title>Contact | Andrew Poore</title>
+    <link rel="icon" type="image/x-icon" href="assets/ap-monogram.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a id="monogram" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Layer_1" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;"
+                    xml:space="preserve">
+                    <path class="st0"
+                        d="M414.8,518.9c0,75.5-61.2,136.7-136.7,136.7c-75.5,0-136.7-61.2-136.7-136.7c0-75.5,61.2-136.7,136.7-136.7  C353.6,382.2,414.8,443.4,414.8,518.9z" />
+                    <path class="st0"
+                        d="M141.4,792.3c0-75.5,61.2-136.7,136.7-136.7c75.5,0,136.7,61.2,136.7,136.7c0,75.5-61.2,136.7-136.7,136.7  C202.6,929,141.4,867.8,141.4,792.3z" />
+                    <path class="st2"
+                        d="M580.7,385.9h114.1h0c63,0,114.1,51.1,114.1,114.1v0c0,63-51.1,114.1-114.1,114.1h0H580.7V480.4" />
+                    <line class="st2" x1="580.7" y1="842.4" x2="580.7" y2="614.1" />
+                    <polygon class="st2" points="580.7,157.6 580.7,385.9 352.4,385.9 " />
+                    <line class="st2" x1="352.4" y1="385.9" x2="580.7" y2="157.6" />
+                    <line class="st2" x1="191" y1="547.3" x2="352.4" y2="385.9" />
+                    <line class="st2" x1="580.7" y1="480.4" x2="580.7" y2="157.6" />
+                </svg>
+            </a>
+            <div class="menu-links">
+                <a class="menu-item" href="contact.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="form-ctn">
+        <form action="https://formsubmit.co/1227096b5bca97c965f0b5b3604bbf89" method="POST">
+
+            <h1 class="heading">
+                Design is a conversation.<br />
+                <span id="typed-content"></span><span id="cursor">|</span>
+            </h1>
+
+
+            <input type="hidden" name="_next" value="https://andrewpoore.github.io/ap-portfolio/thanks.html">
+
+            <div class="input">
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" required>
+            </div>
+
+            <div class="input">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required>
+            </div>
+
+            <div class="input">
+                <label for="message">Message:</label>
+                <textarea id="message" name="Message" required></textarea>
+            </div>
+
+            <button id="contact-btn" type="submit">Send</button>
+
+        </form>
+    </div>
+
+    <script>
+        const message = "This is where it starts.";
+        const typedContent = document.getElementById("typed-content");
+        const cursor = document.getElementById("cursor");
+        let index = 0;
+        const speed = 100;
+        const delayBeforeTyping = 500;
+
+        function type() {
+            if (index < message.length) {
+                typedContent.textContent += message.charAt(index);
+                index++;
+                setTimeout(type, speed);
+            } else {
+                // Optional: stop cursor blinking
+                // cursor.style.animation = 'none';
+            }
+        }
+
+        setTimeout(type, delayBeforeTyping);
+    </script>
+
+</body>
+
+</html>
